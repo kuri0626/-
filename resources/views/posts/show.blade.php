@@ -7,6 +7,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylwsheet">
     </head>
+    <x-app-layout>
     <body>
         <h1 class="title">
             {{ $post->title }}
@@ -15,10 +16,12 @@
             <div class="content__port">
                 <h3>本文</h3>
                 <p>{{ $post->body }}</p>
+                <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
             </div>
         </div>
         <div class="footer">
             <a href="/">戻る</a>
         </div>
     </body>
+    </x-app-layout>
 </html>
